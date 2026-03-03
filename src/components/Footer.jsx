@@ -9,10 +9,10 @@ export default function Footer() {
           {/* 品牌信息 */}
           <div>
             <h3 className="font-display text-2xl md:text-3xl mb-2">
-              {SITE_INFO.title}
+              {SITE_INFO?.title || 'Ace.R Kitchen'}
             </h3>
             <p className="text-gray-300 text-sm md:text-base font-serif italic">
-              {SITE_INFO.description}
+              {SITE_INFO?.description}
             </p>
           </div>
 
@@ -21,7 +21,7 @@ export default function Footer() {
             <h4 className="font-semibold text-lg mb-4">快速导航</h4>
             <ul className="space-y-2 text-sm md:text-base text-gray-300">
               <li key="home">
-                
+                <a
                   href="/"
                   className="hover:text-orange transition-colors"
                 >
@@ -29,7 +29,7 @@ export default function Footer() {
                 </a>
               </li>
               <li key="about">
-                
+                <a
                   href="#"
                   className="hover:text-orange transition-colors"
                 >
@@ -37,7 +37,7 @@ export default function Footer() {
                 </a>
               </li>
               <li key="contact">
-                
+                <a
                   href="#"
                   className="hover:text-orange transition-colors"
                 >
@@ -51,8 +51,8 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-4">关注我们</h4>
             <div className="flex gap-4">
-              {SOCIAL_LINKS.map((link) => (
-                
+              {SOCIAL_LINKS?.map((link) => (
+                <a
                   key={link.name}
                   href={link.url}
                   title={link.label}
@@ -73,7 +73,7 @@ export default function Footer() {
         {/* 分割线 */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p>
-            © {SITE_INFO.year} {SITE_INFO.title}. 保留所有权利。
+            © {SITE_INFO?.year} {SITE_INFO?.title}. 保留所有权利。
           </p>
           <p>
             Made with 🍽️ and ❤️
