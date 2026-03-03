@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import Header from '../components/Header'
-import MealCard from '../components/MealCard'
-import Footer from '../components/Footer'
+import Header from "../components/Header";
+import MealCard from "../components/MealCard";
+import Footer from "../components/Footer";
 import { CATEGORIES } from '../data/config'
 
 export default function CategoryView({ meals }) {

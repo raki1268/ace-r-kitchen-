@@ -3,7 +3,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'cream': '#F5F1ED',
+        'cream': '#FCE4EC',
         'charcoal': '#2C2C2C',
         'orange': '#E8934A',
         'green': '#A4C76E',

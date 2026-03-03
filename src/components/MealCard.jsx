@@ -59,17 +59,9 @@ export default function MealCard({ meal, categoryColor }) {
           </div>
 
           {/* 预览描述 */}
-          <p className="text-gray-700 text-xs md:text-sm line-clamp-2 mb-3">
+          <p className="text-gray-700 text-xs md:text-sm line-clamp-2">
             {meal.notes}
           </p>
-
-          {/* 成本 */}
-          <div className="flex justify-between items-center pt-3 border-t border-gray-100">
-            <span className="text-xs text-gray-500">消费</span>
-            <span className="font-semibold text-orange text-sm md:text-base">
-              ¥{meal.cost}
-            </span>
-          </div>
         </div>
       </div>
     </Link>
