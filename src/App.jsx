@@ -9,6 +9,7 @@ export default function App() {
   const [meals, setMeals] = useState([])
 
   useEffect(() => {
+    // 简洁！只需直接设置数据
     setMeals(mealsData.meals)
   }, [])
 
@@ -59,7 +60,7 @@ export default function App() {
         emojiEl.style.top = `${lastMouseY}px`
         document.body.appendChild(emojiEl)
 
-        // 20秒后移除
+        // 2秒后移除
         setTimeout(() => emojiEl.remove(), 2000)
       }, 5000)
     }

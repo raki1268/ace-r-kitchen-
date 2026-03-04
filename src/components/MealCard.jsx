@@ -1,5 +1,33 @@
 import { Link } from 'react-router-dom'
 
+const getImageUrl = (rawPath) => {
+  if (!rawPath) return '';
+  
+  // 1. 如果是网络图片，直接返回
+  if (rawPath.startsWith('http')) return rawPath;
+
+  let displayImage = rawPath;
+
+  // 2. 去掉 public/ 前缀（如果有）
+  if (displayImage.startsWith('public/')) {
+    displayImage = displayImage.replace('public/', '');
+  }
+
+  // 3. 统一去掉开头的斜杠，方便后续拼接
+  if (displayImage.startsWith('/')) {
+    displayImage = displayImage.substring(1);
+  }
+
+  // 4. 关键修复：使用 Vite 的 BASE_URL 自动拼接路径
+  // 它会自动处理成 /ace-r-kitchen-/images/bakery/...
+  const baseUrl = import.meta.env.BASE_URL; // 获取 vite.config.js 里的 base
+  
+  // 确保 baseUrl 以 / 结尾，displayImage 不以 / 开头
+  const fullBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  
+  return `${fullBase}${displayImage}`;
+}
+
 export default function MealCard({ meal, categoryColor, hideRating = false, hidePrice = false, hideDate = false }) {
   const renderStars = (rating) => {
     return (
@@ -18,19 +46,9 @@ export default function MealCard({ meal, categoryColor, hideRating = false, hide
     )
   }
 
-  // --- 统一后的路径逻辑 ---
-  // 1. 优先取 images 数组的第一张，如果没有则尝试取旧的 image 字段
+  // 获取第一张图片并转换路径
   const rawPath = (meal.images && meal.images.length > 0) ? meal.images[0] : (meal.image || '');
-
-  // 2. 路径转换：
-  //    - 如果以 "public/" 开头，去掉它变成以 "/" 开头
-  //    - 如果既不以 "http" 开头也不以 "/" 开头（相对路径），补上 "/"
-  let displayImage = rawPath.replace(/^public\//, '/');
-  
-  if (displayImage && !displayImage.startsWith('http') && !displayImage.startsWith('/')) {
-    displayImage = '/' + displayImage;
-  }
-  // --- 逻辑结束 ---
+  const displayImage = getImageUrl(rawPath);
 
   return (
     <Link to={`/meal/${meal.id}`}>
@@ -41,11 +59,8 @@ export default function MealCard({ meal, categoryColor, hideRating = false, hide
             src={displayImage}
             alt={meal.name}
             className="w-full h-full object-cover"
-            // 加载失败时打印清晰的排查信息
             onError={(e) => {
-              console.error(`图片加载失败! \n 菜品: ${meal.name} \n 原始数据: ${rawPath} \n 转换后尝试路径: ${displayImage}`);
-              // 可选：设置一个备用占位图
-              // e.target.src = 'https://via.placeholder.com/400x400?text=No+Image';
+              console.error(`图片加载失败! 菜品: ${meal.name}, 原始数据: ${rawPath}, 转换后路径: ${displayImage}`);
             }}
           />
           

@@ -5,6 +5,27 @@ import StarRating from '../components/StarRating'
 import Footer from '../components/Footer'
 import { CATEGORIES } from '../data/config'
 
+// 辅助函数：统一处理图片路径（支持 CodeSpaces 环境）
+const getImageUrl = (rawPath) => {
+  if (!rawPath) return 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&h=600&fit=crop'
+  
+  let displayImage = rawPath;
+
+  // 如果是以 public/ 开头，去掉 public
+  if (displayImage.startsWith('public/')) {
+    displayImage = '/' + displayImage.replace('public/', '');
+  }
+
+  // 如果既不是 http 也不是 /，加 /
+  if (displayImage && !displayImage.startsWith('http') && !displayImage.startsWith('/')) {
+    displayImage = '/' + displayImage;
+  }
+
+  // 关键修复：不要用 import.meta.url，直接返回相对根目录的路径
+  // Vite 会自动识别并从 public 文件夹加载
+  return displayImage;
+}
+
 export default function DetailView({ meals }) {
   const { mealId } = useParams()
   const navigate = useNavigate()
@@ -47,8 +68,9 @@ export default function DetailView({ meals }) {
 
   const categoryColor = CATEGORIES[meal.category]?.color || '#E8934A'
   
-  // 获取图片数组
-  const images = Array.isArray(meal.images) ? meal.images : [meal.image || 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&h=600&fit=crop']
+  // 获取图片数组 - 使用路径转换
+  const rawImages = Array.isArray(meal.images) ? meal.images : [meal.image || '']
+  const images = rawImages.map(img => getImageUrl(img))
   const currentImage = images[currentImageIndex]
 
   // 前一张图片
