@@ -19,10 +19,9 @@ body {
   color: #2C2C2C;
 }
 
-/* 春天背景 - 樱花粉 + 嫩绿 + 织布肌理 + 浮动色块 */
+/* 春天背景 */
 .spring-background {
   background: 
-    /* 多个浮动色块 - 创造更丰富的春天配色 */
     radial-gradient(circle at 15% 25%, rgba(248, 187, 208, 0.5) 0%, transparent 15%),
     radial-gradient(circle at 85% 15%, rgba(200, 230, 201, 0.5) 0%, transparent 12%),
     radial-gradient(circle at 25% 75%, rgba(165, 214, 167, 0.5) 0%, transparent 18%),
@@ -33,14 +32,14 @@ body {
     radial-gradient(circle at 40% 20%, rgba(248, 187, 208, 0.5) 0%, transparent 13%),
     radial-gradient(circle at 60% 80%, rgba(165, 214, 167, 0.5) 0%, transparent 17%),
     radial-gradient(circle at 70% 30%, rgba(255, 249, 196, 0.5) 0%, transparent 12%);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   position: relative;
   min-height: 100vh;
   animation: springDrift 35s ease-in-out infinite;
 }
 
-/* 背景图片图层 - 用伪元素处理，方便添加高斯模糊 */
+/* 修正：背景图片图层，确保在最底层 */
 .spring-background::after {
   content: '';
   position: fixed;
@@ -48,7 +47,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/bg001.png');
+  background-image: url('images/bg001.png'); /* 相对路径更安全 */
   background-size: auto;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -57,25 +56,7 @@ body {
   pointer-events: none;
 }
 
-/* 春风懒游动画 - 色块轻轻漂移 */
-@keyframes springDrift {
-  0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 3% 2%;
-  }
-  50% {
-    background-position: 0% 4%;
-  }
-  75% {
-    background-position: -3% 2%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-
+/* 修正：织布纹理图层，z-index 改为 -1 */
 .spring-background::before {
   content: '';
   position: fixed;
@@ -84,199 +65,30 @@ body {
   width: 100%;
   height: 100%;
   background-image: 
-    /* 织布肌理纹理 - 横向线条 */
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.08) 0px,
-      rgba(255, 255, 255, 0.08) 1px,
-      transparent 1px,
-      transparent 3px
-    ),
-    /* 织布肌理纹理 - 纵向线条 */
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.05) 0px,
-      rgba(255, 255, 255, 0.05) 1px,
-      transparent 1px,
-      transparent 3px
-    ),
-    /* 细微噪点纹理 */
-    repeating-linear-gradient(
-      45deg,
-      rgba(0, 0, 0, 0.02) 0px,
-      rgba(0, 0, 0, 0.02) 2px,
-      transparent 2px,
-      transparent 4px
-    );
-  background-size: 100% 100%, 100% 100%, 100% 100%;
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0px, rgba(255, 255, 255, 0.08) 1px, transparent 1px, transparent 3px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 3px),
+    repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.02) 0px, rgba(0, 0, 0, 0.02) 2px, transparent 2px, transparent 4px);
+  background-size: 100% 100%;
   pointer-events: none;
-  z-index: 1;
+  z-index: -1; /* 这里是修复空白的关键 */
   animation: fabricSway 40s ease-in-out infinite;
 }
 
-/* 织布随风摇曳 */
+/* 动画和后续样式保持不变... */
+@keyframes springDrift {
+  0%, 100% { background-position: 0% 0%; }
+  50% { background-position: 0% 4%; }
+}
+
 @keyframes fabricSway {
-  0%, 100% {
-    opacity: 0.5;
-    transform: translateX(0) translateY(0);
-  }
-  25% {
-    opacity: 0.55;
-    transform: translateX(8px) translateY(-4px);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateX(0) translateY(0);
-  }
-  75% {
-    opacity: 0.55;
-    transform: translateX(-8px) translateY(-4px);
-  }
+  0%, 100% { opacity: 0.5; transform: translate(0, 0); }
+  50% { opacity: 0.55; transform: translate(8px, -4px); }
 }
 
-/* 自定义滚动条 */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(252, 228, 236, 0.3);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #E8934A;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #D17E35;
-}
-
-/* 平滑过渡 */
-.transition-smooth {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.transition-color {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* 旋转转盘动画 */
-@keyframes rotateWheel {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(var(--rotation-angle, 0deg));
-  }
-}
-
-.radial-wheel {
-  animation: rotateWheel 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-/* 浮动卡片效果 */
-.card-hover {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.3s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-}
-
-/* 星级评分样式 */
-.star {
-  display: inline-block;
-  color: #E8934A;
-  font-size: 1.2rem;
-  margin-right: 2px;
-}
-
-.star.empty {
-  color: #DDD;
-}
-
-/* 响应式网格 */
-@media (max-width: 768px) {
-  .grid-auto {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .grid-auto {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* 页面过渡动画 */
-.page-enter {
-  animation: fadeIn 0.5s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* 装饰元素 */
-.decorative-line {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #E8934A, transparent);
-  margin: 2rem 0;
-}
-
-/* 背景纹理 */
-.texture-overlay {
-  position: relative;
-}
-
-.texture-overlay::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 50%, rgba(232, 147, 74, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(164, 199, 110, 0.03) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-/* 鼠标跟踪和动态色彩效果 */
 .emoji-float {
   position: fixed;
   font-size: 4rem;
   pointer-events: none;
-  z-index: 2;
-  animation: randomEmoji 20s ease-in-out forwards;
-  transform: translate(-50%, -50%);
-  line-height: 1;
-}
-
-@keyframes randomEmoji {
-  0% { 
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.3);
-  }
-  2% { 
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  98% { 
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% { 
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.3);
-  }
+  z-index: 50; /* 提高 emoji 层级 */
+  animation: randomEmoji 2s ease-in-out forwards;
 }

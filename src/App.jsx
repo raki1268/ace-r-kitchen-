@@ -82,12 +82,16 @@ export default function App() {
   }, [])
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home meals={meals} />} />
-        <Route path="/category/:categoryName" element={<CategoryView meals={meals} />} />
-        <Route path="/meal/:mealId" element={<DetailView meals={meals} />} />
-      </Routes>
+    <Router basename="/ace-r-kitchen-">
+      {/* 核心内容容器：z-index 设为 10，确保它在所有背景层之上 */}
+      <div className="relative z-10 min-h-screen">
+        <Routes>
+          <Route path="/" element={<Home meals={meals} />} />
+          <Route path="/category/:categoryName" element={<CategoryView meals={meals} />} />
+          <Route path="/meal/:mealId" element={<DetailView meals={meals} />} />
+          <Route path="*" element={<Home meals={meals} />} />
+        </Routes>
+      </div>
     </Router>
   )
 }
