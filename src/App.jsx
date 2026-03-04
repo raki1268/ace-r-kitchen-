@@ -59,8 +59,8 @@ export default function App() {
         emojiEl.style.top = `${lastMouseY}px`
         document.body.appendChild(emojiEl)
 
-        // 8秒后移除
-        setTimeout(() => emojiEl.remove(), 8000)
+        // 20秒后移除
+        setTimeout(() => emojiEl.remove(), 2000)
       }, 5000)
     }
 

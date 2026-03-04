@@ -4,6 +4,7 @@ import MealCard from '../components/MealCard'
 import Footer from '../components/Footer'
 import { CATEGORIES } from '../data/config'
 
+
 export default function CategoryView({ meals }) {
   const { categoryName } = useParams()
   const navigate = useNavigate()

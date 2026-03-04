@@ -2,10 +2,10 @@
 export const bakeryData = [
   {
     id: 'bk001',
-    name: '黑芝麻糕',
+    name: 'Kiwi奥利奥慕斯蛋糕',
     date: '2025-03',
     rating: 5,
-    images: ['images/bakery/bk001.jpg'],
+    images: ['public/images/bakery/bk001.jpg'],
     ingredients: ['黑芝麻粉 100g', '糯米粉 150g', '糖 60g', '牛奶 100ml', '黄油 30g'],
     steps: [
       '混合黑芝麻粉和糯米粉',
