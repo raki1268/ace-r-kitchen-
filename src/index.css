@@ -19,12 +19,61 @@ body {
   color: #2C2C2C;
 }
 
-/* 春天背景 - 樱花粉 + 嫩绿 + 织布肌理 */
+/* 春天背景 - 樱花粉 + 嫩绿 + 织布肌理 + 浮动色块 */
 .spring-background {
-  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 25%, #fff9c4 50%, #c8e6c9 75%, #a5d6a7 100%);
-  background-size: 400% 400%;
-  animation: springFloat 20s ease-in-out infinite;
+  background: 
+    /* 多个浮动色块 - 创造更丰富的春天配色 */
+    radial-gradient(circle at 15% 25%, rgba(248, 187, 208, 0.5) 0%, transparent 15%),
+    radial-gradient(circle at 85% 15%, rgba(200, 230, 201, 0.5) 0%, transparent 12%),
+    radial-gradient(circle at 25% 75%, rgba(165, 214, 167, 0.5) 0%, transparent 18%),
+    radial-gradient(circle at 75% 85%, rgba(252, 228, 236, 0.5) 0%, transparent 15%),
+    radial-gradient(circle at 50% 50%, rgba(255, 249, 196, 0.5) 0%, transparent 20%),
+    radial-gradient(circle at 10% 50%, rgba(240, 244, 195, 0.5) 0%, transparent 14%),
+    radial-gradient(circle at 90% 50%, rgba(200, 230, 201, 0.5) 0%, transparent 16%),
+    radial-gradient(circle at 40% 20%, rgba(248, 187, 208, 0.5) 0%, transparent 13%),
+    radial-gradient(circle at 60% 80%, rgba(165, 214, 167, 0.5) 0%, transparent 17%),
+    radial-gradient(circle at 70% 30%, rgba(255, 249, 196, 0.5) 0%, transparent 12%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   position: relative;
+  min-height: 100vh;
+  animation: springDrift 35s ease-in-out infinite;
+}
+
+/* 背景图片图层 - 用伪元素处理，方便添加高斯模糊 */
+.spring-background::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/bg001.png');
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  z-index: -2;
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+/* 春风懒游动画 - 色块轻轻漂移 */
+@keyframes springDrift {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 3% 2%;
+  }
+  50% {
+    background-position: 0% 4%;
+  }
+  75% {
+    background-position: -3% 2%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .spring-background::before {
@@ -38,57 +87,51 @@ body {
     /* 织布肌理纹理 - 横向线条 */
     repeating-linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.03) 0px,
-      rgba(255, 255, 255, 0.03) 1px,
+      rgba(255, 255, 255, 0.08) 0px,
+      rgba(255, 255, 255, 0.08) 1px,
       transparent 1px,
-      transparent 2px
+      transparent 3px
     ),
     /* 织布肌理纹理 - 纵向线条 */
     repeating-linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.02) 0px,
-      rgba(255, 255, 255, 0.02) 1px,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
       transparent 1px,
-      transparent 2px
+      transparent 3px
     ),
     /* 细微噪点纹理 */
     repeating-linear-gradient(
       45deg,
-      rgba(0, 0, 0, 0.01) 0px,
-      rgba(0, 0, 0, 0.01) 1px,
-      transparent 1px,
-      transparent 2px
+      rgba(0, 0, 0, 0.02) 0px,
+      rgba(0, 0, 0, 0.02) 2px,
+      transparent 2px,
+      transparent 4px
     );
   background-size: 100% 100%, 100% 100%, 100% 100%;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
+  animation: fabricSway 40s ease-in-out infinite;
 }
 
-/* 春风飘拂动画 */
-@keyframes springFloat {
-  0% {
-    background-position: 0% 50%;
+/* 织布随风摇曳 */
+@keyframes fabricSway {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateX(0) translateY(0);
   }
   25% {
-    background-position: 50% 0%;
+    opacity: 0.55;
+    transform: translateX(8px) translateY(-4px);
   }
   50% {
-    background-position: 100% 50%;
+    opacity: 0.5;
+    transform: translateX(0) translateY(0);
   }
   75% {
-    background-position: 50% 100%;
+    opacity: 0.55;
+    transform: translateX(-8px) translateY(-4px);
   }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* 春风摇曳效果 */
-@keyframes sway {
-  0%, 100% { transform: translateX(0) translateY(0) rotate(0deg); }
-  25% { transform: translateX(15px) translateY(-8px) rotate(1deg); }
-  50% { transform: translateX(0) translateY(-4px) rotate(0deg); }
-  75% { transform: translateX(-15px) translateY(-8px) rotate(-1deg); }
 }
 
 /* 自定义滚动条 */

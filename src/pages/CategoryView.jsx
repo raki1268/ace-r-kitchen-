@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import Header from "../components/Header";
-import MealCard from "../components/MealCard";
-import Footer from "../components/Footer";
+import Header from '../components/Header'
+import MealCard from '../components/MealCard'
+import Footer from '../components/Footer'
 import { CATEGORIES } from '../data/config'
 
 export default function CategoryView({ meals }) {
@@ -31,6 +31,9 @@ export default function CategoryView({ meals }) {
   const avgCost =
     sortedMeals.length > 0 ? (totalCost / sortedMeals.length).toFixed(1) : 0
 
+  // 隐藏价格的逻辑
+  const shouldHidePrice = categoryName !== '餐厅' && categoryName !== '外卖'
+
   return (
     <div className="min-h-screen bg-cream">
       {/* 头部 */}
@@ -40,6 +43,20 @@ export default function CategoryView({ meals }) {
         showBack={true}
         onBack={() => navigate('/')}
       />
+
+      {/* 面包屑导航 */}
+      <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="flex items-center gap-2 text-sm md:text-base text-gray-600">
+          <button 
+            onClick={() => navigate('/')}
+            className="hover:text-orange transition-colors"
+          >
+            首页
+          </button>
+          <span>/</span>
+          <span className="text-orange font-medium">{categoryName}</span>
+        </div>
+      </div>
 
       {/* 分类介绍区 */}
       <section className="py-12 md:py-16 px-4 texture-overlay">
@@ -128,7 +145,11 @@ export default function CategoryView({ meals }) {
                     animationDelay: `${index * 0.1}s`,
                   }}
                 >
-                  <MealCard meal={meal} categoryColor={categoryColor} />
+                  <MealCard 
+                    meal={meal} 
+                    categoryColor={categoryColor}
+                    hidePrice={shouldHidePrice}
+                  />
                 </div>
               ))}
             </div>
