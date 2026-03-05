@@ -22,20 +22,17 @@ body {
 }
 
 /* ============================================================
-   2. 打印模式优化 (核心新增)
+   2. 打印模式优化
    ============================================================ */
 @media print {
-  /* 隐藏所有不需要打印的 UI 元素 */
   .no-print, 
   header, 
   footer, 
   nav, 
-  button, 
-  .cloud-joke-container {
+  button {
     display: none !important;
   }
 
-  /* 调整打印布局：取消背景图，改为白底黑字便于阅读 */
   body {
     background: white !important;
     color: black !important;
@@ -47,7 +44,6 @@ body {
     display: none !important;
   }
 
-  /* 容器宽度拉满，取消阴影 */
   .max-w-4xl {
     max-width: 100% !important;
     width: 100% !important;
@@ -56,7 +52,6 @@ body {
     box-shadow: none !important;
   }
 
-  /* 强制显示图片并调整大小 */
   img {
     max-height: 350px !important;
     width: auto !important;
@@ -65,7 +60,6 @@ body {
     page-break-inside: avoid;
   }
 
-  /* 保持网格布局在一页内合理排列 */
   .grid {
     display: block !important;
   }
@@ -77,7 +71,7 @@ body {
 }
 
 /* ============================================================
-   3. 春天背景逻辑 (保持你的原有逻辑并修正)
+   3. 春天背景逻辑
    ============================================================ */
 .spring-background {
   background: 
@@ -132,7 +126,7 @@ body {
 }
 
 /* ============================================================
-   4. 动画定义 (Emoji, 进度条流光, 云朵上升)
+   4. 动画与特效定义
    ============================================================ */
 @keyframes springDrift {
   0%, 100% { background-position: 0% 0%; }
@@ -144,15 +138,7 @@ body {
   50% { opacity: 0.55; transform: translate(8px, -4px); }
 }
 
-.emoji-float {
-  position: fixed;
-  font-size: 4rem;
-  pointer-events: none;
-  z-index: 50;
-  animation: randomEmoji 2s ease-in-out forwards;
-}
-
-/* 进度条流光动画 (新增) */
+/* 进度条流光 */
 .shimmer-effect {
   position: relative;
   overflow: hidden;
@@ -175,26 +161,33 @@ body {
   100% { transform: translateX(100%); }
 }
 
-/* 云朵漂浮动画 (针对网页端新增) */
-.cloud-joke-container {
-  animation: cloud-float-up 6.5s ease-in-out forwards;
+/* 喷泉粒子动画 */
+.fountain-particle {
+  position: fixed;
+  bottom: -20px;
+  left: 50%;
+  pointer-events: none;
+  z-index: 100;
+  animation: fountain-rise 3s ease-out forwards;
 }
 
-@keyframes cloud-float-up {
+@keyframes fountain-rise {
   0% {
-    transform: translate(-50%, 120px) scale(0.8);
-    opacity: 0;
-  }
-  15% {
-    transform: translate(-50%, -15vh) scale(1);
+    transform: translate(-50%, 0) scale(0.5) rotate(0deg);
     opacity: 1;
   }
-  85% {
-    transform: translate(-50%, -80vh) scale(1.1);
+  30% {
     opacity: 1;
   }
   100% {
-    transform: translate(-50%, -100vh) scale(1.3);
+    transform: translate(var(--tw-translate-x), -100vh) scale(1.5) rotate(var(--tw-rotate));
     opacity: 0;
   }
+}
+
+/* 弹球云专用性能优化 */
+.bouncing-cloud {
+  will-change: transform;
+  user-select: none;
+  -webkit-user-drag: none;
 }
