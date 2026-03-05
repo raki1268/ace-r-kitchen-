@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 全局样式 */
+/* ============================================================
+   1. 全局基础样式
+   ============================================================ */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +21,64 @@ body {
   color: #2C2C2C;
 }
 
-/* 春天背景 */
+/* ============================================================
+   2. 打印模式优化 (核心新增)
+   ============================================================ */
+@media print {
+  /* 隐藏所有不需要打印的 UI 元素 */
+  .no-print, 
+  header, 
+  footer, 
+  nav, 
+  button, 
+  .cloud-joke-container {
+    display: none !important;
+  }
+
+  /* 调整打印布局：取消背景图，改为白底黑字便于阅读 */
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+  }
+
+  .spring-background::before,
+  .spring-background::after {
+    display: none !important;
+  }
+
+  /* 容器宽度拉满，取消阴影 */
+  .max-w-4xl {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* 强制显示图片并调整大小 */
+  img {
+    max-height: 350px !important;
+    width: auto !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    page-break-inside: avoid;
+  }
+
+  /* 保持网格布局在一页内合理排列 */
+  .grid {
+    display: block !important;
+  }
+  
+  .grid > div {
+    margin-bottom: 2rem !important;
+    page-break-inside: avoid;
+  }
+}
+
+/* ============================================================
+   3. 春天背景逻辑 (保持你的原有逻辑并修正)
+   ============================================================ */
 .spring-background {
   background: 
     radial-gradient(circle at 15% 25%, rgba(248, 187, 208, 0.5) 0%, transparent 15%),
@@ -39,7 +98,6 @@ body {
   animation: springDrift 35s ease-in-out infinite;
 }
 
-/* 修正：背景图片图层，确保在最底层 */
 .spring-background::after {
   content: '';
   position: fixed;
@@ -47,7 +105,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('images/bg001.png'); /* 相对路径更安全 */
+  background-image: url('images/bg001.png');
   background-size: auto;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -56,7 +114,6 @@ body {
   pointer-events: none;
 }
 
-/* 修正：织布纹理图层，z-index 改为 -1 */
 .spring-background::before {
   content: '';
   position: fixed;
@@ -70,11 +127,13 @@ body {
     repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.02) 0px, rgba(0, 0, 0, 0.02) 2px, transparent 2px, transparent 4px);
   background-size: 100% 100%;
   pointer-events: none;
-  z-index: -1; /* 这里是修复空白的关键 */
+  z-index: -1;
   animation: fabricSway 40s ease-in-out infinite;
 }
 
-/* 动画和后续样式保持不变... */
+/* ============================================================
+   4. 动画定义 (Emoji, 进度条流光, 云朵上升)
+   ============================================================ */
 @keyframes springDrift {
   0%, 100% { background-position: 0% 0%; }
   50% { background-position: 0% 4%; }
@@ -89,6 +148,53 @@ body {
   position: fixed;
   font-size: 4rem;
   pointer-events: none;
-  z-index: 50; /* 提高 emoji 层级 */
+  z-index: 50;
   animation: randomEmoji 2s ease-in-out forwards;
+}
+
+/* 进度条流光动画 (新增) */
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-effect::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.4) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  animation: shimmer-move 2.5s infinite linear;
+}
+
+@keyframes shimmer-move {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* 云朵漂浮动画 (针对网页端新增) */
+.cloud-joke-container {
+  animation: cloud-float-up 6.5s ease-in-out forwards;
+}
+
+@keyframes cloud-float-up {
+  0% {
+    transform: translate(-50%, 120px) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    transform: translate(-50%, -15vh) scale(1);
+    opacity: 1;
+  }
+  85% {
+    transform: translate(-50%, -80vh) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -100vh) scale(1.3);
+    opacity: 0;
+  }
 }

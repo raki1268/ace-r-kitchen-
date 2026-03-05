@@ -9,18 +9,15 @@ export default function App() {
   const [meals, setMeals] = useState([])
 
   useEffect(() => {
-    // 简洁！只需直接设置数据
     setMeals(mealsData.meals)
   }, [])
 
-  // 鼠标追踪和动态效果
   useEffect(() => {
-    const foodEmojis = ['🍱', '🍜', '🍲', '🥘', '🍛', '🍝', '🍕', '🍔', '🌮', '🥗', '🍙', '🥟', '🍚', '🫕', '🥠']
+    const foodEmojis = ['🍱', '🍜', '🍲', '🥘', '🍛', '🍝', '🍕', '🍔', '🌮', '🥗', '🍙', '饺', '🍚', '🫕', '🥠']
     let mouseIdleTimer = null
     let lastMouseX = 0
     let lastMouseY = 0
 
-    // 创建追踪光圈元素（仅用于视觉效果，不影响转盘）
     const tracker = document.createElement('div')
     tracker.id = 'mouse-tracker'
     tracker.style.cssText = `
@@ -40,17 +37,12 @@ export default function App() {
     const handleMouseMove = (e) => {
       lastMouseX = e.clientX
       lastMouseY = e.clientY
-
-      // 显示追踪光圈
       tracker.style.display = 'block'
       tracker.style.opacity = '1'
       tracker.style.left = `${e.clientX - 150}px`
       tracker.style.top = `${e.clientY - 150}px`
 
-      // 清除空闲计时器
       if (mouseIdleTimer) clearTimeout(mouseIdleTimer)
-
-      // 设置新的空闲计时器（5秒无鼠标移动后显示emoji）
       mouseIdleTimer = setTimeout(() => {
         const randomEmoji = foodEmojis[Math.floor(Math.random() * foodEmojis.length)]
         const emojiEl = document.createElement('div')
@@ -59,8 +51,6 @@ export default function App() {
         emojiEl.style.left = `${lastMouseX}px`
         emojiEl.style.top = `${lastMouseY}px`
         document.body.appendChild(emojiEl)
-
-        // 2秒后移除
         setTimeout(() => emojiEl.remove(), 2000)
       }, 5000)
     }
@@ -84,7 +74,6 @@ export default function App() {
 
   return (
     <Router basename="/ace-r-kitchen-">
-      {/* 核心内容容器：z-index 设为 10，确保它在所有背景层之上 */}
       <div className="relative z-10 min-h-screen">
         <Routes>
           <Route path="/" element={<Home meals={meals} />} />

@@ -1,51 +1,25 @@
 import { Link } from 'react-router-dom'
 
+// 辅助函数：统一处理图片路径（支持 CodeSpaces 环境和子路径）
 const getImageUrl = (rawPath) => {
   if (!rawPath) return '';
-  
-  // 1. 如果是网络图片，直接返回
   if (rawPath.startsWith('http')) return rawPath;
 
   let displayImage = rawPath;
-
-  // 2. 去掉 public/ 前缀（如果有）
   if (displayImage.startsWith('public/')) {
     displayImage = displayImage.replace('public/', '');
   }
-
-  // 3. 统一去掉开头的斜杠，方便后续拼接
   if (displayImage.startsWith('/')) {
     displayImage = displayImage.substring(1);
   }
 
-  // 4. 关键修复：使用 Vite 的 BASE_URL 自动拼接路径
-  // 它会自动处理成 /ace-r-kitchen-/images/bakery/...
-  const baseUrl = import.meta.env.BASE_URL; // 获取 vite.config.js 里的 base
-  
-  // 确保 baseUrl 以 / 结尾，displayImage 不以 / 开头
+  const baseUrl = import.meta.env.BASE_URL;
   const fullBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
   
   return `${fullBase}${displayImage}`;
 }
 
-export default function MealCard({ meal, categoryColor, hideRating = false, hidePrice = false, hideDate = false }) {
-  const renderStars = (rating) => {
-    return (
-      <div className="flex gap-1">
-        {[...Array(5)].map((_, i) => (
-          <span
-            key={i}
-            className={`text-lg ${
-              i < Math.floor(rating) ? 'text-orange' : 'text-gray-300'
-            }`}
-          >
-            ★
-          </span>
-        ))}
-      </div>
-    )
-  }
-
+export default function MealCard({ meal, categoryColor, hidePrice = false, hideDate = false }) {
   // 获取第一张图片并转换路径
   const rawPath = (meal.images && meal.images.length > 0) ? meal.images[0] : (meal.image || '');
   const displayImage = getImageUrl(rawPath);
@@ -60,10 +34,11 @@ export default function MealCard({ meal, categoryColor, hideRating = false, hide
             alt={meal.name}
             className="w-full h-full object-cover"
             onError={(e) => {
-              console.error(`图片加载失败! 菜品: ${meal.name}, 原始数据: ${rawPath}, 转换后路径: ${displayImage}`);
+              console.error(`图片加载失败! 菜品: ${meal.name}, 路径: ${displayImage}`);
             }}
           />
           
+          {/* 分类标签 */}
           <div
             className="absolute top-3 right-3 px-3 py-1 rounded-full text-white text-xs font-semibold"
             style={{ backgroundColor: categoryColor }}
@@ -71,11 +46,7 @@ export default function MealCard({ meal, categoryColor, hideRating = false, hide
             {meal.category}
           </div>
           
-          {!hideRating && (
-            <div className="absolute bottom-3 left-3 bg-white bg-opacity-95 rounded-lg p-2">
-              {renderStars(meal.rating)}
-            </div>
-          )}
+          {/* 注意：这里的星星评分代码已被移除，实现首页和分类页的简洁显示 */}
         </div>
 
         <div className="p-4 md:p-5">

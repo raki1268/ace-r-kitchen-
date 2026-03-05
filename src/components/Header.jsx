@@ -2,9 +2,14 @@ import { Link } from 'react-router-dom'
 
 export default function Header({ title, subtitle, showBack = false, onBack }) {
   return (
-    <header className="bg-cream border-b border-orange border-opacity-20 sticky top-0 z-50">
+    /* 添加了 no-print 类名，确保打印配方时隐藏页眉 */
+    <header className="bg-cream border-b border-orange border-opacity-20 sticky top-0 z-50 no-print">
       <div className="max-w-7xl mx-auto px-4 py-4 md:py-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <Link 
+          to="/" 
+          onClick={() => window.scrollTo(0, 0)} 
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+        >
           <span className="text-2xl md:text-3xl">🍽️</span>
           <div>
             <h1 className="font-display text-lg md:text-2xl text-charcoal font-bold">
