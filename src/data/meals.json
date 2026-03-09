@@ -7,7 +7,7 @@
       "date": "2026-02",
       "rating": 0,
       "images": [
-        "/images/homemake/hm001.jpg"
+        "/images/optimized/homemake/hm001.webp"
       ],
       "ingredients": [
         "牛腩",
@@ -20,9 +20,8 @@
       ],
       "notes": "简单的午餐",
       "cuisine": "",
-      "entry_date": "46087.0",
-      "difficulty": 50,
-      "makingTime": 40
+      "difficulty": 50.0,
+      "makingTime": 40.0
     },
     {
       "id": "hm002",
@@ -31,7 +30,7 @@
       "date": "2026-02",
       "rating": 0,
       "images": [
-        "/images/homemake/hm002.jpg"
+        "/images/optimized/homemake/hm002.webp"
       ],
       "ingredients": [
         "细面条",
@@ -45,9 +44,8 @@
       ],
       "notes": "简单的午餐",
       "cuisine": "",
-      "entry_date": "",
-      "difficulty": 30,
-      "makingTime": 30
+      "difficulty": 30.0,
+      "makingTime": 30.0
     },
     {
       "id": "hm003",
@@ -56,10 +54,10 @@
       "date": "2026-02",
       "rating": 0,
       "images": [
-        "/images/homemake/hm003-1.jpg",
-        "/images/homemake/hm003-2.jpg",
-        "/images/homemake/hm003-3.jpg",
-        "/images/homemake/hm003-4.jpg"
+        "/images/optimized/homemake/hm003-1.webp",
+        "/images/optimized/homemake/hm003-2.webp",
+        "/images/optimized/homemake/hm003-3.webp",
+        "/images/optimized/homemake/hm003-4.webp"
       ],
       "ingredients": [
         "牛肩肉",
@@ -76,24 +74,33 @@
       ],
       "notes": "随心火锅，冬天必备，不知道吃什么时必备",
       "cuisine": "",
-      "entry_date": "",
-      "difficulty": 0,
-      "makingTime": 15
+      "difficulty": 0.0,
+      "makingTime": 15.0
     },
     {
       "id": "hm004",
-      "name": "nan",
+      "name": "荞麦面鸡胸肉麻辣烫",
       "category": "自煮",
-      "date": "2026-02",
+      "date": "2025-12",
       "rating": 0,
       "images": [
-        "/images/homemake/hm004.jpg"
+        "/images/optimized/homemake/hm004.webp"
       ],
-      "ingredients": [],
-      "steps": [],
-      "notes": "",
+      "ingredients": [
+        "荞麦面",
+        "鸡胸肉",
+        "火锅底料",
+        "牛奶",
+        "时蔬"
+      ],
+      "steps": [
+        "鸡肉胸先加玉米粉和味道腌好",
+        "煮火锅底料；开心的话可以加点豆腐和肉丸；然后加荞麦面；然后加鸡胸肉和时蔬；盖盖子关火；焖3分钟后开吃"
+      ],
+      "notes": "一人食的懒人百搭餐",
       "cuisine": "",
-      "entry_date": ""
+      "difficulty": 30.0,
+      "makingTime": 30.0
     },
     {
       "id": "hm005",
@@ -102,11 +109,11 @@
       "date": "2026-02",
       "rating": 0,
       "images": [
-        "/images/homemake/hm005-1.jpg",
-        "/images/homemake/hm005-2.jpg",
-        "/images/homemake/hm005-3.jpg",
-        "/images/homemake/hm005-4.jpg",
-        "/images/homemake/hm005-5.jpg",
+        "/images/optimized/homemake/hm005-1.webp",
+        "/images/optimized/homemake/hm005-2.webp",
+        "/images/optimized/homemake/hm005-3.webp",
+        "/images/optimized/homemake/hm005-4.webp",
+        "/images/optimized/homemake/hm005-5.webp",
         ""
       ],
       "ingredients": [
@@ -123,9 +130,8 @@
       ],
       "notes": "朋友聚餐最简单，又好吃又热闹",
       "cuisine": "",
-      "entry_date": "",
-      "difficulty": 20,
-      "makingTime": 15
+      "difficulty": 20.0,
+      "makingTime": 15.0
     },
     {
       "id": "hm006",
@@ -134,10 +140,10 @@
       "date": "2026-02",
       "rating": 0,
       "images": [
-        "/images/homemake/hm006-1.jpg",
-        "/images/homemake/hm006-2.jpg",
-        "/images/homemake/hm006-3.jpg",
-        "/images/homemake/hm006-4.jpg",
+        "/images/optimized/homemake/hm006-1.webp",
+        "/images/optimized/homemake/hm006-2.webp",
+        "/images/optimized/homemake/hm006-3.webp",
+        "/images/optimized/homemake/hm006-4.webp",
         ""
       ],
       "ingredients": [
@@ -156,9 +162,8 @@
       ],
       "notes": "过节8道菜",
       "cuisine": "",
-      "entry_date": "",
-      "difficulty": 60,
-      "makingTime": 120
+      "difficulty": 60.0,
+      "makingTime": 120.0
     },
     {
       "id": "hm007",
@@ -167,8 +172,8 @@
       "date": "2026-02",
       "rating": 0,
       "images": [
-        "/images/homemake/hm007-1.jpg",
-        "/images/homemake/hm007-2.jpg"
+        "/images/optimized/homemake/hm007-1.webp",
+        "/images/optimized/homemake/hm007-2.webp"
       ],
       "ingredients": [
         "黑鱼片",
@@ -187,9 +192,8 @@
       ],
       "notes": "味道基本跟外面一样呢，嘿嘿",
       "cuisine": "",
-      "entry_date": "",
-      "difficulty": 70,
-      "makingTime": 40
+      "difficulty": 70.0,
+      "makingTime": 40.0
     },
     {
       "id": "hm008",
@@ -198,8 +202,8 @@
       "date": "2026-02",
       "rating": 0,
       "images": [
-        "/images/homemake/hm008-1.jpg",
-        "/images/homemake/hm008-2.jpg"
+        "/images/optimized/homemake/hm008-1.webp",
+        "/images/optimized/homemake/hm008-2.webp"
       ],
       "ingredients": [
         "芋头包",
@@ -216,9 +220,8 @@
       ],
       "notes": "懒人早餐，碳水偏多",
       "cuisine": "",
-      "entry_date": "",
-      "difficulty": 0,
-      "makingTime": 15
+      "difficulty": 0.0,
+      "makingTime": 15.0
     },
     {
       "id": "hm009",
@@ -227,10 +230,10 @@
       "date": "2026-02",
       "rating": 0,
       "images": [
-        "/images/homemake/hm009-1.jpg",
-        "/images/homemake/hm009-2.jpg",
-        "/images/homemake/hm009-3.jpg",
-        "/images/homemake/hm009-4.jpg",
+        "/images/optimized/homemake/hm009-1.webp",
+        "/images/optimized/homemake/hm009-2.webp",
+        "/images/optimized/homemake/hm009-3.webp",
+        "/images/optimized/homemake/hm009-4.webp",
         ""
       ],
       "ingredients": [
@@ -252,9 +255,409 @@
       ],
       "notes": "咖喱酱可以一次性多煮一点，下一顿淋米饭也很美味哦",
       "cuisine": "",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 60
+      "difficulty": 80.0,
+      "makingTime": 60.0
+    },
+    {
+      "id": "hm010",
+      "name": "芝士蘑菇土豆焗饭",
+      "category": "自煮",
+      "date": "2025-12",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm010-1.webp",
+        "/images/optimized/homemake/hm010-2.webp"
+      ],
+      "ingredients": [
+        "西兰花",
+        "鸡腿肉；米；芝士；土豆"
+      ],
+      "steps": [
+        "好复杂hh自己查"
+      ],
+      "notes": "焗饭高热量的神，但是真的好吃欸",
+      "cuisine": "",
+      "difficulty": 80.0,
+      "makingTime": 60.0
+    },
+    {
+      "id": "hm011",
+      "name": "枫叶形状的意面",
+      "category": "自煮",
+      "date": "2025-12",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm011-1.webp",
+        "/images/optimized/homemake/hm011-2.webp"
+      ],
+      "ingredients": [
+        "意面",
+        "肉酱"
+      ],
+      "steps": [
+        "把意面煮熟；加热肉酱",
+        "把意面捞出放进去搅"
+      ],
+      "notes": "主要是好玩",
+      "cuisine": "",
+      "difficulty": 10.0,
+      "makingTime": 20.0
+    },
+    {
+      "id": "hm012",
+      "name": "牛腱肉片煎香肠饭",
+      "category": "自煮",
+      "date": "2025-12",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm012-1.webp",
+        "/images/optimized/homemake/hm012-2.webp",
+        ""
+      ],
+      "ingredients": [
+        "牛腱",
+        "香肠",
+        "西兰花"
+      ],
+      "steps": [
+        "卤牛腱",
+        "提前放冰箱冷藏定型",
+        "拿出来切",
+        "煮其他东西",
+        "摆盘"
+      ],
+      "notes": "煮一次牛腱可以吃很久哦",
+      "cuisine": "",
+      "difficulty": 50.0,
+      "makingTime": 70.0
+    },
+    {
+      "id": "hm013",
+      "name": "鸡胸肉沙拉卷",
+      "category": "自煮",
+      "date": "2025-11",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm013-1.webp",
+        "/images/optimized/homemake/hm013-2.webp",
+        ""
+      ],
+      "ingredients": [
+        "鸡胸肉冷冻菜",
+        "新鲜沙拉",
+        "薯饼"
+      ],
+      "steps": [
+        "把该放进烤箱的东西放进烤箱加热",
+        "沙拉加日式芝麻沙拉酱拌好",
+        "一点饼"
+      ],
+      "notes": "懒人必备",
+      "cuisine": "",
+      "difficulty": 0.0,
+      "makingTime": 20.0
+    },
+    {
+      "id": "hm014",
+      "name": "中秋自制牛排土豆泥",
+      "category": "自煮",
+      "date": "2025-11",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm010-1.webp",
+        "/images/optimized/homemake/hm014-2.webp",
+        "/images/optimized/homemake/hm014-3.webp",
+        "/images/optimized/homemake/hm014-4.webp",
+        "/images/optimized/homemake/hm014-5.webp",
+        "/images/optimized/homemake/hm014-6.webp",
+        "/images/optimized/homemake/hm014-7.webp",
+        "/images/optimized/homemake/hm014-8.webp",
+        ""
+      ],
+      "ingredients": [
+        "西兰花",
+        "土豆",
+        "牛排"
+      ],
+      "steps": [
+        "土豆先蒸熟",
+        "弄成泥",
+        "再塑形",
+        "放烤箱烤好",
+        "牛排烤好",
+        "西兰花炒好"
+      ],
+      "notes": "每个人都可以做自己喜欢的土豆泥形状哦",
+      "cuisine": "",
+      "difficulty": 80.0,
+      "makingTime": 100.0
+    },
+    {
+      "id": "hm015",
+      "name": "土豆配牛排",
+      "category": "自煮",
+      "date": "2025-11",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm010-1.webp",
+        "/images/optimized/homemake/hm015-2.webp",
+        "/images/optimized/homemake/hm015-3.webp",
+        "/images/optimized/homemake/hm015-4.webp",
+        "/images/optimized/homemake/hm015-5.webp",
+        ""
+      ],
+      "ingredients": [
+        "土豆",
+        "牛排"
+      ],
+      "steps": [
+        "牛排要先煎四面",
+        "再放进烤箱低温烤",
+        "有条件的可以插个控温针",
+        "就不会烤过火了"
+      ],
+      "notes": "谁能拒绝5成熟的牛肉+土豆黑胡椒叻",
+      "cuisine": "",
+      "difficulty": 60.0,
+      "makingTime": 60.0
+    },
+    {
+      "id": "hm016",
+      "name": "金枪鱼沙拉",
+      "category": "自煮",
+      "date": "2025-11",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm016-1.webp",
+        "/images/optimized/homemake/hm016-2.webp",
+        ""
+      ],
+      "ingredients": [
+        "金枪鱼罐头",
+        "罗马生菜"
+      ],
+      "steps": [
+        "罗马生菜怎么切是个学问",
+        "自己查hh",
+        "切好后洗好甩干",
+        "开金枪鱼罐头",
+        "把油滤掉",
+        "把鱼拌进去"
+      ],
+      "notes": "其实金枪鱼罐头也很油腻，最好还是用橄榄油+醋",
+      "cuisine": "",
+      "difficulty": 10.0,
+      "makingTime": 15.0
+    },
+    {
+      "id": "hm017",
+      "name": "龙虾意面+法棍",
+      "category": "自煮",
+      "date": "2025-11",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm017-1.webp",
+        "/images/optimized/homemake/hm017-2.webp",
+        "/images/optimized/homemake/hm017-3.webp",
+        "/images/optimized/homemake/hm017-4.webp",
+        ""
+      ],
+      "ingredients": [
+        "3头龙虾",
+        "意面",
+        "一节法棍"
+      ],
+      "steps": [
+        "太过于复杂过程省略"
+      ],
+      "notes": "太好吃啊啊啊",
+      "cuisine": "",
+      "difficulty": 80.0,
+      "makingTime": 120.0
+    },
+    {
+      "id": "hm018",
+      "name": "烤鸡肉+沙拉",
+      "category": "自煮",
+      "date": "2025-11",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm018-1.webp",
+        "/images/optimized/homemake/hm018-2.webp",
+        "/images/optimized/homemake/hm018-3.webp",
+        ""
+      ],
+      "ingredients": [
+        "Costco经典烤鸡：各种沙拉菜"
+      ],
+      "steps": [
+        "撕鸡；拌沙拉"
+      ],
+      "notes": "我喜欢Costco的烤鸡，特别是鸡胸肉拿去拌老干妈",
+      "cuisine": "",
+      "difficulty": 30.0,
+      "makingTime": 20.0
+    },
+    {
+      "id": "hm019",
+      "name": "泡面烤鸡腿",
+      "category": "自煮",
+      "date": "2025-11",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm019.webp"
+      ],
+      "ingredients": [
+        "鸡腿",
+        "泡面",
+        "时蔬"
+      ],
+      "steps": [
+        "鸡腿提前腌好粉",
+        "烤",
+        "泡泡面",
+        "煮时蔬",
+        "完工"
+      ],
+      "notes": "懒人午餐",
+      "cuisine": "",
+      "difficulty": 40.0,
+      "makingTime": 30.0
+    },
+    {
+      "id": "hm020",
+      "name": "牛排奶酪卷饼",
+      "category": "自煮",
+      "date": "2025-10",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm020-1.webp",
+        "/images/optimized/homemake/hm020-2.webp",
+        "/images/optimized/homemake/hm020-3.webp",
+        "/images/optimized/homemake/hm020-4.webp",
+        ""
+      ],
+      "ingredients": [
+        "牛排",
+        "微笑牛奶酪",
+        "饼",
+        "沙拉菜"
+      ],
+      "steps": [
+        "烤牛排",
+        "卷起来"
+      ],
+      "notes": "卷饼其实更适合碎一点的牛肉，这样可以一口完整得咬下来",
+      "cuisine": "",
+      "difficulty": 40.0,
+      "makingTime": 40.0
+    },
+    {
+      "id": "hm021",
+      "name": "鸡胸肉沙拉卷",
+      "category": "自煮",
+      "date": "2025-10",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm021-1.webp",
+        "/images/optimized/homemake/hm021-2.webp",
+        "/images/optimized/homemake/hm021-3.webp",
+        ""
+      ],
+      "ingredients": [
+        "Costco吃剩的烤鸡",
+        "沙拉",
+        "饼皮"
+      ],
+      "steps": [
+        "把烤鸡撕片拌老干妈和辣椒面",
+        "放点黄瓜就更好啦",
+        "卷起来"
+      ],
+      "notes": "饼皮是可有可无的",
+      "cuisine": "",
+      "difficulty": 20.0,
+      "makingTime": 20.0
+    },
+    {
+      "id": "hm022",
+      "name": "黑米饭+煎虾",
+      "category": "自煮",
+      "date": "2025-10",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm022.webp",
+        ""
+      ],
+      "ingredients": [
+        "黑米",
+        "白米",
+        "时蔬",
+        "虾",
+        "宜家肉丸"
+      ],
+      "steps": [
+        "这个菜怎么煮好像挺一目了然的"
+      ],
+      "notes": "低脂午餐",
+      "cuisine": "",
+      "difficulty": 30.0,
+      "makingTime": 35.0
+    },
+    {
+      "id": "hm023",
+      "name": "一盘出烤鸡腿肉",
+      "category": "自煮",
+      "date": "2025-10",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm023-1.webp",
+        "/images/optimized/homemake/hm023-2.webp",
+        ""
+      ],
+      "ingredients": [
+        "鸡腿",
+        "洋葱",
+        "土豆",
+        "胡萝卜",
+        "黄油"
+      ],
+      "steps": [
+        "按照图片的位置摆",
+        "黄油用牙签插在肉上面",
+        "其实好像没什么太大作用"
+      ],
+      "notes": "一道尝试后没记忆的菜色",
+      "cuisine": "",
+      "difficulty": 50.0,
+      "makingTime": 40.0
+    },
+    {
+      "id": "hm024",
+      "name": "简单的早餐",
+      "category": "自煮",
+      "date": "2025-10",
+      "rating": 0,
+      "images": [
+        "/images/optimized/homemake/hm024-1.webp",
+        "/images/optimized/homemake/hm024-2.webp"
+      ],
+      "ingredients": [
+        "鸡蛋",
+        "牛奶",
+        "香蕉",
+        "法棍",
+        "生菜",
+        "小西红柿",
+        "麦片"
+      ],
+      "steps": [
+        "摆在一起"
+      ],
+      "notes": "这样的菜色坚持不了多久",
+      "cuisine": "",
+      "difficulty": 20.0,
+      "makingTime": 20.0
     },
     {
       "id": "rt001",
@@ -263,7 +666,7 @@
       "date": "2025-02",
       "rating": 3.0,
       "images": [
-        "/images/restaurant/rt001.jpg"
+        "/images/optimized/restaurant/rt001.webp"
       ],
       "ingredients": [
         "肉酱薯条",
@@ -276,7 +679,6 @@
       ],
       "notes": "鸡肉卷不错，炸鸡胸肉条吃起来素素的，酱OK",
       "cuisine": "西式",
-      "entry_date": "",
       "cost": 30.0
     },
     {
@@ -286,8 +688,8 @@
       "date": "2025-02",
       "rating": 1.0,
       "images": [
-        "/images/restaurant/rt002-1.jpg",
-        "/images/restaurant/rt002-2.jpg"
+        "/images/optimized/restaurant/rt002-1.webp",
+        "/images/optimized/restaurant/rt002-2.webp"
       ],
       "ingredients": [
         "自选多样菜色",
@@ -298,7 +700,6 @@
       ],
       "notes": "锅底有一股中药味不是很喜欢，很多蒜头。中低端火锅店",
       "cuisine": "中式",
-      "entry_date": "",
       "cost": 76.0
     },
     {
@@ -308,7 +709,7 @@
       "date": "2025-02",
       "rating": 3.0,
       "images": [
-        "/images/restaurant/rt003.jpg"
+        "/images/optimized/restaurant/rt003.webp"
       ],
       "ingredients": [
         "经典口味+鸡肉拌粉"
@@ -318,7 +719,6 @@
       ],
       "notes": "越南粉是不想吃上火的东西的时候，会第2个蹦出来的选项，基本款不会出错",
       "cuisine": "越南菜",
-      "entry_date": "",
       "cost": 56.4
     },
     {
@@ -328,7 +728,7 @@
       "date": "2025-02",
       "rating": 3.0,
       "images": [
-        "/images/restaurant/rt004.jpg"
+        "/images/optimized/restaurant/rt004.webp"
       ],
       "ingredients": [
         "培根牛肉汉堡包+必点薯条"
@@ -338,7 +738,6 @@
       ],
       "notes": "小size就够吃咯，自助花生很有意思，味道没有独立汉堡店好吃",
       "cuisine": "西餐",
-      "entry_date": "",
       "cost": 32.7
     },
     {
@@ -348,8 +747,8 @@
       "date": "2025-02",
       "rating": 4.0,
       "images": [
-        "/images/restaurant/rt005-1.jpg",
-        "/images/restaurant/rt005-2.jpg"
+        "/images/optimized/restaurant/rt005-1.webp",
+        "/images/optimized/restaurant/rt005-2.webp"
       ],
       "ingredients": [
         "半只鸡+其他杂七杂八的配菜"
@@ -359,7 +758,6 @@
       ],
       "notes": "服务和味道都很在线，但是排队1个半小时+等待用餐50分钟让这顿饭时间性价比很低",
       "cuisine": "中式",
-      "entry_date": "",
       "cost": 80.0
     },
     {
@@ -369,8 +767,8 @@
       "date": "2025-02",
       "rating": 3.0,
       "images": [
-        "/images/takeout/to001-1.jpg",
-        "/images/takeout/to001-2.jpg"
+        "/images/optimized/takeout/to001-1.webp",
+        "/images/optimized/takeout/to001-2.webp"
       ],
       "ingredients": [
         "3个口味的炸鸡"
@@ -380,7 +778,6 @@
       ],
       "notes": "还是最喜欢甜辣酱",
       "cuisine": "韩餐",
-      "entry_date": "",
       "cost": 30.0
     },
     {
@@ -390,8 +787,8 @@
       "date": "2025-01",
       "rating": 3.0,
       "images": [
-        "/images/takeout/to002-1.jpg",
-        "/images/takeout/to002-2.jpg",
+        "/images/optimized/takeout/to002-1.webp",
+        "/images/optimized/takeout/to002-2.webp",
         ""
       ],
       "ingredients": [
@@ -404,7 +801,6 @@
       ],
       "notes": "披萨的味道，哈哈",
       "cuisine": "日式",
-      "entry_date": "",
       "cost": 14.69
     },
     {
@@ -414,9 +810,9 @@
       "date": "2025-02",
       "rating": 3.0,
       "images": [
-        "/images/takeout/to003-1.jpg",
-        "/images/takeout/to003-2.jpg",
-        "/images/takeout/to003-3.jpg"
+        "/images/optimized/takeout/to003-1.webp",
+        "/images/optimized/takeout/to003-2.webp",
+        "/images/optimized/takeout/to003-3.webp"
       ],
       "ingredients": [
         "沙爹牛肉",
@@ -427,7 +823,6 @@
       ],
       "notes": "味道正常",
       "cuisine": "中餐",
-      "entry_date": "",
       "cost": 25.0
     },
     {
@@ -437,9 +832,9 @@
       "date": "2025-02",
       "rating": 2.0,
       "images": [
-        "/images/takeout/to004-1.jpg",
-        "/images/takeout/to004-2.jpg",
-        "/images/takeout/to004-3.jpg"
+        "/images/optimized/takeout/to004-1.webp",
+        "/images/optimized/takeout/to004-2.webp",
+        "/images/optimized/takeout/to004-3.webp"
       ],
       "ingredients": [
         "炸猪排",
@@ -451,7 +846,6 @@
       ],
       "notes": "炸猪排还行;但是口水鸡和麻辣香锅一般般",
       "cuisine": "中餐",
-      "entry_date": "",
       "cost": 25.0
     },
     {
@@ -461,7 +855,7 @@
       "date": "2025-02",
       "rating": 4.0,
       "images": [
-        "/images/takeout/to005.jpg"
+        "/images/optimized/takeout/to005.webp"
       ],
       "ingredients": [
         "牛肉碎粗粮面包三明治x2"
@@ -471,7 +865,6 @@
       ],
       "notes": "喜欢里面脆脆的炸洋葱",
       "cuisine": "西式",
-      "entry_date": "",
       "cost": 14.48
     },
     {
@@ -481,7 +874,7 @@
       "date": "2026-01",
       "rating": 4.0,
       "images": [
-        "/images/convenient/bd001.jpg"
+        "/images/optimized/convenient/bd001.webp"
       ],
       "ingredients": [
         "花生米饭",
@@ -499,9 +892,8 @@
       ],
       "notes": "有点过于丰富的午餐便当...",
       "cuisine": "中餐",
-      "entry_date": "",
-      "difficulty": 60,
-      "makingTime": 30
+      "difficulty": 60.0,
+      "makingTime": 30.0
     },
     {
       "id": "bd002",
@@ -510,10 +902,10 @@
       "date": "2026-01",
       "rating": 4.0,
       "images": [
-        "/images/convenient/bd002-1.jpg",
-        "/images/convenient/bd002-2.jpg",
-        "/images/convenient/bd002-3.jpg",
-        "/images/convenient/bd002-4.jpg"
+        "/images/optimized/convenient/bd002-1.webp",
+        "/images/optimized/convenient/bd002-2.webp",
+        "/images/optimized/convenient/bd002-3.webp",
+        "/images/optimized/convenient/bd002-4.webp"
       ],
       "ingredients": [
         "牛肉碎",
@@ -530,9 +922,8 @@
       ],
       "notes": "虽然制作汉堡肉很麻烦, 但制作一次之后放冰箱可以吃很多次哦",
       "cuisine": "中&日",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 70
+      "difficulty": 80.0,
+      "makingTime": 70.0
     },
     {
       "id": "bd003",
@@ -541,8 +932,8 @@
       "date": "2026-01",
       "rating": 4.0,
       "images": [
-        "/images/convenient/bd003-1.jpg",
-        "/images/convenient/bd003-2.jpg"
+        "/images/optimized/convenient/bd003-1.webp",
+        "/images/optimized/convenient/bd003-2.webp"
       ],
       "ingredients": [
         "米饭",
@@ -560,9 +951,8 @@
       ],
       "notes": "用米饭高压锅一起煮一道菜实质是利用里面的蒸汽,偷懒的好办法哦",
       "cuisine": "中餐",
-      "entry_date": "",
-      "difficulty": 40,
-      "makingTime": 30
+      "difficulty": 40.0,
+      "makingTime": 30.0
     },
     {
       "id": "bd004",
@@ -571,7 +961,7 @@
       "date": "2026-01",
       "rating": 4.0,
       "images": [
-        "/images/convenient/bd004.jpg"
+        "/images/optimized/convenient/bd004.webp"
       ],
       "ingredients": [
         "米饭",
@@ -589,9 +979,8 @@
       ],
       "notes": "西兰花是点缀便当的好食材",
       "cuisine": "中餐",
-      "entry_date": "",
-      "difficulty": 40,
-      "makingTime": 35
+      "difficulty": 40.0,
+      "makingTime": 35.0
     },
     {
       "id": "bd005",
@@ -600,11 +989,11 @@
       "date": "2026-01",
       "rating": 4.0,
       "images": [
-        "/images/convenient/bd005-1.jpg",
-        "/images/convenient/bd005-2.jpg",
-        "/images/convenient/bd005-3.jpg",
-        "/images/convenient/bd005-4.jpg",
-        "/images/convenient/bd005-5.jpg"
+        "/images/optimized/convenient/bd005-1.webp",
+        "/images/optimized/convenient/bd005-2.webp",
+        "/images/optimized/convenient/bd005-3.webp",
+        "/images/optimized/convenient/bd005-4.webp",
+        "/images/optimized/convenient/bd005-5.webp"
       ],
       "ingredients": [
         "白米,紫米,糯米5:3:2",
@@ -623,9 +1012,8 @@
       ],
       "notes": "方便快捷的饭团,非常适合准备好带出门吃",
       "cuisine": "日式",
-      "entry_date": "",
-      "difficulty": 30,
-      "makingTime": 20
+      "difficulty": 30.0,
+      "makingTime": 20.0
     },
     {
       "id": "bd006",
@@ -634,11 +1022,11 @@
       "date": "2026-01",
       "rating": 4.0,
       "images": [
-        "/images/convenient/bd006-1.jpg",
-        "/images/convenient/bd006-2.jpg",
-        "/images/convenient/bd006-3.jpg",
-        "/images/convenient/bd006-4.jpg",
-        "/images/convenient/bd006-5.jpg"
+        "/images/optimized/convenient/bd006-1.webp",
+        "/images/optimized/convenient/bd006-2.webp",
+        "/images/optimized/convenient/bd006-3.webp",
+        "/images/optimized/convenient/bd006-4.webp",
+        "/images/optimized/convenient/bd006-5.webp"
       ],
       "ingredients": [
         "白米,紫米,糯米5:3:2",
@@ -656,9 +1044,8 @@
       ],
       "notes": "方便快捷的饭团,非常适合准备好带出门吃",
       "cuisine": "日式",
-      "entry_date": "",
-      "difficulty": 30,
-      "makingTime": 20
+      "difficulty": 30.0,
+      "makingTime": 20.0
     },
     {
       "id": "bk001",
@@ -667,7 +1054,7 @@
       "date": "2025-03",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk001.jpg"
+        "/images/optimized/bakery/bk001.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -686,9 +1073,8 @@
       ],
       "notes": "口感软糯，黑芝麻香气十足，很解馋",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 45
+      "difficulty": 80.0,
+      "makingTime": 45.0
     },
     {
       "id": "bk002",
@@ -697,7 +1083,7 @@
       "date": "2025-01",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk002.jpg"
+        "/images/optimized/bakery/bk002.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -716,9 +1102,8 @@
       ],
       "notes": "抹茶的清香和芝士的浓郁完美融合，甜度刚好",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 60
+      "difficulty": 80.0,
+      "makingTime": 60.0
     },
     {
       "id": "bk003",
@@ -727,7 +1112,7 @@
       "date": "2025-01",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk003.jpg"
+        "/images/optimized/bakery/bk003.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -746,9 +1131,8 @@
       ],
       "notes": "榴莲的王道吃法！尽管价格贵但真的值得",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 90
+      "difficulty": 80.0,
+      "makingTime": 90.0
     },
     {
       "id": "bk004",
@@ -757,7 +1141,7 @@
       "date": "2025-02",
       "rating": 4.5,
       "images": [
-        "/images/bakery/bk004.jpg"
+        "/images/optimized/bakery/bk004.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -776,9 +1160,8 @@
       ],
       "notes": "酸甜适中，奶油感十足，草莓新鲜又漂亮",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 75
+      "difficulty": 80.0,
+      "makingTime": 75.0
     },
     {
       "id": "bk005",
@@ -787,7 +1170,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk005.jpg"
+        "/images/optimized/bakery/bk005.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -806,9 +1189,8 @@
       ],
       "notes": "切开时巧克力浆缓缓流出，绝对的诱人甜蜜",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk006",
@@ -817,7 +1199,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk006.jpg"
+        "/images/optimized/bakery/bk006.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -831,9 +1213,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk007",
@@ -842,7 +1223,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk007.jpg"
+        "/images/optimized/bakery/bk007.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -856,9 +1237,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk008",
@@ -867,7 +1247,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk008.jpg"
+        "/images/optimized/bakery/bk008.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -881,9 +1261,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk009",
@@ -892,7 +1271,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk009.jpg"
+        "/images/optimized/bakery/bk009.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -906,9 +1285,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk010",
@@ -917,7 +1295,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk010.jpg"
+        "/images/optimized/bakery/bk010.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -931,9 +1309,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk011",
@@ -942,7 +1319,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk011.jpg"
+        "/images/optimized/bakery/bk011.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -956,9 +1333,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk012",
@@ -967,7 +1343,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk012.jpg"
+        "/images/optimized/bakery/bk012.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -981,9 +1357,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk013",
@@ -992,7 +1367,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk013.jpg"
+        "/images/optimized/bakery/bk013.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -1006,9 +1381,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk014",
@@ -1017,7 +1391,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk014.jpg"
+        "/images/optimized/bakery/bk014.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -1031,9 +1405,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk015",
@@ -1042,7 +1415,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk015.jpg"
+        "/images/optimized/bakery/bk015.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -1056,9 +1429,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk016",
@@ -1067,7 +1439,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk016.jpg"
+        "/images/optimized/bakery/bk016.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -1081,9 +1453,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk017",
@@ -1092,7 +1463,7 @@
       "date": "2025-02",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk017.jpg"
+        "/images/optimized/bakery/bk017.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -1106,9 +1477,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk018",
@@ -1117,14 +1487,14 @@
       "date": "2025-03",
       "rating": 6.0,
       "images": [
-        "/images/bakery/bk018-1.jpg",
-        "/images/bakery/bk018-2.jpg",
-        "/images/bakery/bk018-2.jpg",
-        "/images/bakery/bk018-4.jpg",
-        "/images/bakery/bk018-5.jpg",
-        "/images/bakery/bk018-6.jpg",
-        "/images/bakery/bk018-7.jpg",
-        "/images/bakery/bk018-8.jpg"
+        "/images/optimized/bakery/bk018-1.webp",
+        "/images/optimized/bakery/bk018-2.webp",
+        "/images/optimized/bakery/bk018-2.webp",
+        "/images/optimized/bakery/bk018-4.webp",
+        "/images/optimized/bakery/bk018-5.webp",
+        "/images/optimized/bakery/bk018-6.webp",
+        "/images/optimized/bakery/bk018-7.webp",
+        "/images/optimized/bakery/bk018-8.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -1138,9 +1508,8 @@
       ],
       "notes": "经典的甜蜜诱惑",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 81,
-      "makingTime": 41
+      "difficulty": 81.0,
+      "makingTime": 41.0
     },
     {
       "id": "bk019",
@@ -1149,7 +1518,7 @@
       "date": "2025-02",
       "rating": 4.0,
       "images": [
-        "/images/bakery/bk019.jpg"
+        "/images/optimized/bakery/bk019.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -1168,9 +1537,8 @@
       ],
       "notes": "温暖的南瓜香，完美的秋日下午茶",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 70
+      "difficulty": 80.0,
+      "makingTime": 70.0
     },
     {
       "id": "bk020",
@@ -1179,7 +1547,7 @@
       "date": "2025-02",
       "rating": 4.5,
       "images": [
-        "/images/bakery/bk020.jpg"
+        "/images/optimized/bakery/bk020.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -1198,9 +1566,8 @@
       ],
       "notes": "酸甜爽口，柠檬的清香在口中绽放",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 45
+      "difficulty": 80.0,
+      "makingTime": 45.0
     },
     {
       "id": "bk021",
@@ -1209,7 +1576,7 @@
       "date": "2025-01",
       "rating": 4.5,
       "images": [
-        "/images/bakery/bk021.jpg"
+        "/images/optimized/bakery/bk021.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -1228,9 +1595,8 @@
       ],
       "notes": "优雅的红色，甜而不腻的口感，很有质感",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 55
+      "difficulty": 80.0,
+      "makingTime": 55.0
     },
     {
       "id": "bk022",
@@ -1239,7 +1605,7 @@
       "date": "2025-01",
       "rating": 4.0,
       "images": [
-        "/images/bakery/bk022.jpg"
+        "/images/optimized/bakery/bk022.webp"
       ],
       "ingredients": [
         "糖 150g",
@@ -1258,9 +1624,8 @@
       ],
       "notes": "焦糖的苦甜和蛋液的嫩滑完美平衡",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 60
+      "difficulty": 80.0,
+      "makingTime": 60.0
     },
     {
       "id": "bk023",
@@ -1269,7 +1634,7 @@
       "date": "2025-01",
       "rating": 4.5,
       "images": [
-        "/images/bakery/bk023.jpg"
+        "/images/optimized/bakery/bk023.webp"
       ],
       "ingredients": [
         "黄油 100g",
@@ -1289,9 +1654,8 @@
       ],
       "notes": "香脆可口，白巧的甜和开心果的香很搭",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 35
+      "difficulty": 80.0,
+      "makingTime": 35.0
     },
     {
       "id": "bk024",
@@ -1300,7 +1664,7 @@
       "date": "2025-03",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk024.jpg"
+        "/images/optimized/bakery/bk024.webp"
       ],
       "ingredients": [
         "鸡蛋 4个",
@@ -1321,9 +1685,8 @@
       ],
       "notes": "抹茶的清苦配白巧的甜，层次丰富",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 55
+      "difficulty": 80.0,
+      "makingTime": 55.0
     },
     {
       "id": "bk025",
@@ -1332,7 +1695,7 @@
       "date": "2025-02",
       "rating": 4.0,
       "images": [
-        "/images/bakery/bk025.jpg"
+        "/images/optimized/bakery/bk025.webp"
       ],
       "ingredients": [
         "面粉 200g",
@@ -1353,9 +1716,8 @@
       ],
       "notes": "酸甜的樱桃融入蛋糕里，每一口都能吃到",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 40
+      "difficulty": 80.0,
+      "makingTime": 40.0
     },
     {
       "id": "bk026",
@@ -1364,7 +1726,7 @@
       "date": "2025-03",
       "rating": 5.0,
       "images": [
-        "/images/bakery/bk026.jpg"
+        "/images/optimized/bakery/bk026.webp"
       ],
       "ingredients": [
         "黑巧克力",
@@ -1384,9 +1746,8 @@
       ],
       "notes": "经典的黑森林，华丽又不失优雅",
       "cuisine": "甜点",
-      "entry_date": "",
-      "difficulty": 80,
-      "makingTime": 120
+      "difficulty": 80.0,
+      "makingTime": 120.0
     }
   ]
 }
